@@ -475,51 +475,40 @@
           <strong id="selectedCourseLabel">Choose a course</strong>
           <strong id="selectedCourseFee">Rs. 5,000</strong>
         </div>
-        <form id="modalRegistrationForm">
+        <form id="modalRegistrationForm" action="https://formsubmit.co/zamankhan452df@gmail.com" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="Naya Student Registration - Khayam Khan Academy">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://zamankhan452df-droid.github.io/Khayam-Khan-Academy/">
           <div class="form-grid">
-            <div class="field"><label for="modalFullName">Full Name</label><input id="modalFullName" required placeholder="Enter your full name"></div>
-            <div class="field"><label for="modalWhatsapp">WhatsApp Number</label><input id="modalWhatsapp" required placeholder="+92 3XX XXXXXXX"></div>
-            <div class="field"><label for="modalEmail">Email</label><input id="modalEmail" type="email" required placeholder="your@email.com" autocomplete="email"></div>
-            <div class="field"><label for="modalPassword">Login Password</label><input id="modalPassword" type="password" required minlength="6" placeholder="Create a password (min 6 characters)" autocomplete="new-password"></div>
-            <div class="field"><label for="modalAddress">Current Address</label><input id="modalAddress" required placeholder="Enter your current address"></div>
-            <div class="field"><label for="modalQualification">Current Qualification</label><input id="modalQualification" required placeholder="e.g. Matric, Intermediate, BS"></div>
-            <div class="field"><label for="modalPaymentMethod">Payment Method</label>
-              <select id="modalPaymentMethod" required>
-                <option value="">Select payment method</option>
-                <option>Easypaisa</option>
-                <option>JazzCash</option>
+            <div class="field"><label for="modalFullName">Full Name</label><input id="modalFullName" name="Full Name" required placeholder="Enter your full name"></div>
+            <div class="field"><label for="modalWhatsapp">WhatsApp Number</label><input id="modalWhatsapp" name="WhatsApp Number" required placeholder="+92 3XX XXXXXXX"></div>
+            <div class="field"><label for="modalEmail">Email</label><input id="modalEmail" name="Email" type="email" required placeholder="your@email.com" autocomplete="email"></div>
+            <div class="field"><label for="modalPassword">Login Password</label><input id="modalPassword" name="Password" type="password" required minlength="6" placeholder="Create a password (min 6 characters)" autocomplete="new-password"></div>
+            <div class="field"><label for="modalAddress">Current Address</label><input id="modalAddress" name="Current Address" required placeholder="Enter your current address"></div>
+            <div class="field"><label for="modalQualification">Current Qualification</label><input id="modalQualification" name="Current Qualification" required placeholder="e.g. Matric, Intermediate, BS"></div>
+            <div class="field"><label for="modalCourse">Select Course</label>
+              <select id="modalCourse" name="Course" required>
+                <option value="">Choose a course</option><option>Web Development</option><option>Agentic AI</option><option>MS Office</option>
               </select>
+            </div>
+            <div class="field"><label for="modalPaymentMethod">Payment Method</label>
+              <select id="modalPaymentMethod" name="Payment Method" required><option value="">Select payment method</option><option>Easypaisa</option><option>JazzCash</option></select>
             </div>
             <div class="field"><label for="modalPaymentStatus">Payment Status</label>
-              <select id="modalPaymentStatus">
-                <option value="Paid">Paid — receipt will be sent on WhatsApp</option>
-                <option value="Free">Free — agar aap ghareeb hain ya fee afford nahi kar sakte</option>
-              </select>
+              <select id="modalPaymentStatus" name="Payment Status"><option value="Paid">Paid</option><option value="Free">Free - agar aap ghareeb hain ya fee afford nahi kar sakte</option></select>
             </div>
-            <div class="field"><label for="modalAge">Age</label><input id="modalAge" type="number" min="10" max="100" placeholder="Your age"></div>
-            <div class="field full"><label for="modalMessage">Message</label><textarea id="modalMessage" placeholder="Any question or additional information..."></textarea></div>
+            <div class="field"><label for="modalAge">Age</label><input id="modalAge" name="Age" type="number" min="10" max="100" placeholder="Your age"></div>
+            <div class="field full"><label for="modalMessage">Message</label><textarea id="modalMessage" name="Message" placeholder="Any question or additional information..."></textarea></div>
             <div class="field full">
               <div class="modal-payment">
                 <strong><i class="fa-solid fa-money-bill-transfer"></i> Payment Details</strong>
                 <p style="font-size:13px;color:#68758d;margin-top:5px">Easypaisa: <strong>0315 9670967</strong><br>JazzCash: <strong>0327 5644075</strong></p>
-                <p style="font-size:12px;color:#8792a6">Select your payment screenshot here for your record.</p>
-                <label class="upload-box" for="paymentScreenshot">
-                  <i class="fa-solid fa-image"></i>
-                  <span><b>Payment Screenshot</b><small>Tap to choose JPG, PNG or WEBP</small></span>
-                  <input id="paymentScreenshot" type="file" accept="image/*" hidden>
-                </label>
-                <div id="screenshotPreview" class="screenshot-preview" hidden>
-                  <img id="screenshotPreviewImg" alt="Payment screenshot preview">
-                  <button type="button" id="removeScreenshot" class="remove-shot"><i class="fa-solid fa-xmark"></i></button>
-                </div>
+                <p style="font-size:12px;color:#8792a6">Upload your payment screenshot. It will be sent with the registration to the academy email.</p>
+                <label class="upload-box" for="paymentScreenshot"><i class="fa-solid fa-image"></i><span><b>Payment Screenshot</b><small>Tap to choose JPG, PNG or WEBP</small></span><input id="paymentScreenshot" name="attachment" type="file" accept="image/*" required hidden></label>
+                <div id="screenshotPreview" class="screenshot-preview" hidden><img id="screenshotPreviewImg" alt="Payment screenshot preview"><button type="button" id="removeScreenshot" class="remove-shot"><i class="fa-solid fa-xmark"></i></button></div>
               </div>
             </div>
-            <div class="field full">
-              <div class="modal-actions">
-                <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit</button>
-                <button class="btn btn-light" id="cancelRegistration" type="button">Cancel</button>
-              </div>
-            </div>
+            <div class="field full"><div class="modal-actions"><button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit</button><button class="btn btn-light" id="cancelRegistration" type="button">Cancel</button></div></div>
           </div>
         </form>
       </div>
@@ -656,48 +645,27 @@
         </div>
         </div>
 
-        <form class="form" id="registrationForm">
+        <form class="form" id="registrationForm" action="https://formsubmit.co/zamankhan452df@gmail.com" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="Naya Student Registration - Khayam Khan Academy">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://zamankhan452df-droid.github.io/Khayam-Khan-Academy/">
           <h3>Register as a Student</h3>
           <div class="form-grid">
-            <div class="field"><label for="fullName">Full Name</label><input id="fullName" required placeholder="Enter your full name"></div>
-            <div class="field"><label for="whatsapp">WhatsApp Number</label><input id="whatsapp" required placeholder="+92 3XX XXXXXXX"></div>
-            <div class="field"><label for="email">Email</label><input id="email" type="email" required placeholder="your@email.com"></div>
-            <div class="field"><label for="password">Login Password</label><input id="password" type="password" required minlength="6" placeholder="Create a password (min 6 characters)" autocomplete="new-password"></div>
-            <div class="field"><label for="course">Select Course</label>
-              <select id="course" required>
-                <option value="">Choose a course</option>
-                <option>Web Development</option>
-                <option>Agentic AI</option>
-                <option>MS Office</option>
-              </select>
-            </div>
-            <div class="field"><label for="paymentMethod">Payment Method</label>
-              <select id="paymentMethod">
-                <option value="">Select payment method</option>
-                <option>Easypaisa</option>
-                <option>JazzCash</option>
-              </select>
-            </div>
-            <div class="field"><label for="paymentStatus">Payment Status</label>
-              <select id="paymentStatus">
-                <option value="Paid">Paid — receipt will be sent on WhatsApp</option>
-                <option value="Free">Free — agar aap ghareeb hain ya fee afford nahi kar sakte</option>
-              </select>
-            </div>
-            <div class="field full"><label for="message">Message</label><textarea id="message" placeholder="Tell us anything you would like to ask..."></textarea></div>
-            <div class="field full">
-              <label class="upload-box" for="paymentScreenshotMain">
-                <i class="fa-solid fa-image"></i>
-                <span><b>Payment Screenshot</b><small>Select receipt/screenshot for preview</small></span>
-                <input id="paymentScreenshotMain" type="file" accept="image/*" hidden>
-              </label>
-              <div id="screenshotPreviewMain" class="screenshot-preview" hidden>
-                <img id="screenshotPreviewImgMain" alt="Payment screenshot preview">
-              </div>
-            </div>
+            <div class="field"><label for="fullName">Full Name</label><input id="fullName" name="Full Name" required placeholder="Enter your full name"></div>
+            <div class="field"><label for="whatsapp">WhatsApp Number</label><input id="whatsapp" name="WhatsApp Number" required placeholder="+92 3XX XXXXXXX"></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="Email" type="email" required placeholder="your@email.com"></div>
+            <div class="field"><label for="password">Login Password</label><input id="password" name="Password" type="password" required minlength="6" placeholder="Create a password (min 6 characters)" autocomplete="new-password"></div>
+            <div class="field"><label for="course">Select Course</label><select id="course" name="Course" required><option value="">Choose a course</option><option>Web Development</option><option>Agentic AI</option><option>MS Office</option></select></div>
+            <div class="field"><label for="paymentMethod">Payment Method</label><select id="paymentMethod" name="Payment Method" required><option value="">Select payment method</option><option>Easypaisa</option><option>JazzCash</option></select></div>
+            <div class="field"><label for="paymentStatus">Payment Status</label><select id="paymentStatus" name="Payment Status"><option value="Paid">Paid</option><option value="Free">Free - agar aap ghareeb hain ya fee afford nahi kar sakte</option></select></div>
+            <div class="field"><label for="age">Age</label><input id="age" name="Age" type="number" min="10" max="100" placeholder="Your age"></div>
+            <div class="field full"><label for="address">Current Address</label><input id="address" name="Current Address" required placeholder="Enter your current address"></div>
+            <div class="field full"><label for="qualification">Current Qualification</label><input id="qualification" name="Current Qualification" required placeholder="e.g. Matric, Intermediate, BS"></div>
+            <div class="field full"><label for="message">Message</label><textarea id="message" name="Message" placeholder="Tell us anything you would like to ask..."></textarea></div>
+            <div class="field full"><label class="upload-box" for="paymentScreenshotMain"><i class="fa-solid fa-image"></i><span><b>Payment Screenshot</b><small>Upload receipt/screenshot — it will be sent with your registration</small></span><input id="paymentScreenshotMain" name="attachment" type="file" accept="image/*" required hidden></label><div id="screenshotPreviewMain" class="screenshot-preview" hidden><img id="screenshotPreviewImgMain" alt="Payment screenshot preview"></div></div>
             <div class="field full"><button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit</button></div>
           </div>
-          <small>Your student account is securely saved on the academy server for login from any device.</small>
+          <small>Your registration and payment screenshot will be sent to the academy email.</small>
         </form>
       </div>
     </section>
@@ -746,7 +714,7 @@
     const courseFees = {"Web Development":"5,000","Agentic AI":"5,000","MS Office":"1,000"};
 
     function updateModalFee(){
-      const course = document.getElementById('course').value || 'Choose a course';
+      const course = document.getElementById('modalCourse')?.value || document.getElementById('course').value || 'Choose a course';
       selectedCourseLabel.textContent = course;
       selectedCourseFee.textContent = 'Rs. ' + (courseFees[course] || '5,000');
     }
@@ -756,47 +724,7 @@
     registrationModal.addEventListener('click', e => { if(e.target===registrationModal) closeModal(); });
     document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
 
-    function readFileAsDataURL(file){
-      return new Promise((resolve,reject)=>{
-        if(!file){resolve('');return;}
-        if(!file.type.startsWith('image/')){reject(new Error('Please select an image screenshot.'));return;}
-        if(file.size>5*1024*1024){reject(new Error('Screenshot must be 5 MB or smaller.'));return;}
-        const r=new FileReader(); r.onload=()=>resolve(r.result); r.onerror=()=>reject(new Error('Could not read screenshot.')); r.readAsDataURL(file);
-      });
-    }
-
-    async function submitRegistration(formType){
-      const isModal=formType==='modal';
-      const get=id=>document.getElementById(isModal?'modal'+id:id);
-      const form=isModal?modalRegistrationForm:document.getElementById('registrationForm');
-      const name=get('FullName').value.trim();
-      const number=get('Whatsapp').value.trim();
-      const email=get('Email').value.trim().toLowerCase();
-      const password=get('Password').value;
-      const course=get('course').value;
-      const paymentMethod=(get('PaymentMethod')?.value||'').trim();
-      const paymentStatus=(get('PaymentStatus')?.value||'Free').trim();
-      const message=(get('Message')?.value||'').trim();
-      if(!name){alert('Please enter your full name.');return;}
-      if(!email || password.length<6){alert('Please enter a valid email and a password of at least 6 characters.');return;}
-      if(!course){alert('Please select a course.');return;}
-      const students=getStudents();
-      if(students.some(x=>x.email===email)){alert('This email is already registered. Please login.');return;}
-      let screenshot='';
-      try{
-        const shot=document.getElementById(isModal?'paymentScreenshot':'paymentScreenshotMain')?.files?.[0];
-        screenshot=await readFileAsDataURL(shot);
-      }catch(err){alert(err.message);return;}
-      const address=isModal?(document.getElementById('modalAddress')?.value.trim()||''):'';
-      const qualification=isModal?(document.getElementById('modalQualification')?.value.trim()||''):'';
-      const age=isModal?(document.getElementById('modalAge')?.value.trim()||''):'';
-      const student={id:Date.now().toString(),name,phone:number,email,password,course,paymentMethod,paymentStatus,message,address,qualification,age,screenshot,registeredAt:new Date().toISOString()};
-      students.push(student); saveStudents(students);
-      alert('Registration successful. Your details and payment screenshot have been saved on this device.');
-      if(isModal){closeModal();form.reset();}else form.reset();
-    }
-    modalRegistrationForm.addEventListener('submit',e=>{e.preventDefault();submitRegistration('modal');});
-
+    // Forms submit directly to FormSubmit.co so GitHub Pages can receive registrations and screenshots by email.
     function setupScreenshotPicker(inputId,previewId,imgId,removeId){
       const input=document.getElementById(inputId), preview=document.getElementById(previewId), img=document.getElementById(imgId); if(!input)return;
       input.addEventListener('change',()=>{const file=input.files&&input.files[0];if(!file)return;if(!file.type.startsWith('image/')){alert('Please select an image screenshot.');input.value='';return;}if(file.size>5*1024*1024){alert('Screenshot must be 5 MB or smaller.');input.value='';return;}const r=new FileReader();r.onload=e=>{img.src=e.target.result;preview.hidden=false};r.readAsDataURL(file);});
@@ -805,9 +733,8 @@
     setupScreenshotPicker('paymentScreenshot','screenshotPreview','screenshotPreviewImg','removeScreenshot');
     setupScreenshotPicker('paymentScreenshotMain','screenshotPreviewMain','screenshotPreviewImgMain',null);
 
-    document.querySelectorAll('.open-registration').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();document.getElementById('course').value='';updateModalFee();registrationModal.classList.add('show');document.body.style.overflow='hidden';}));
-    document.querySelectorAll('.enroll').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();document.getElementById('course').value=btn.dataset.course;updateModalFee();registrationModal.classList.add('show');document.body.style.overflow='hidden';document.getElementById('modalFullName').focus();}));
-    document.getElementById('registrationForm').addEventListener('submit',e=>{e.preventDefault();submitRegistration('main');});
+    document.querySelectorAll('.open-registration').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();document.getElementById('modalCourse').value='';updateModalFee();registrationModal.classList.add('show');document.body.style.overflow='hidden';}));
+    document.querySelectorAll('.enroll').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();document.getElementById('modalCourse').value=btn.dataset.course;updateModalFee();registrationModal.classList.add('show');document.body.style.overflow='hidden';document.getElementById('modalFullName').focus();}));
 
     document.getElementById('year').textContent=new Date().getFullYear();
 </script>
