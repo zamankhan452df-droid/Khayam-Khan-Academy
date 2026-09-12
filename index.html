@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0b63f6">
-  <meta name="description" content="Khayam Khan Academy — Learn Skills That Pay. Professional courses in Web Development, Graphic Design, Digital Marketing, Freelancing, Video Editing and MS Office.">
+  <meta name="description" content="Khayam Khan Academy — Learn Skills That Pay. Professional courses in Web Development, Agentic AI and MS Office.">
   <title>Khayam Khan Academy | Learn Skills That Pay</title>
 
   <!-- Font Awesome icons -->
@@ -429,6 +429,7 @@
     .registration-modal{scrollbar-width:thin;scrollbar-color:#9fc4ff transparent}.modal-head{position:sticky;top:0;z-index:4;box-shadow:0 8px 20px rgba(4,36,96,.17)}
     .modal-overlay.show{animation:overlayIn .2s ease-out}@keyframes overlayIn{from{opacity:0}to{opacity:1}}
     @media(max-width:700px){.course-img::before{right:10px;bottom:10px;font-size:9px}.course .enroll{min-width:108px}}
+  
   </style>
 </head>
 
@@ -450,7 +451,6 @@
       <div class="nav-links" id="navLinks">
         <a href="#home">Home</a>
         <a href="#courses">Courses</a>
-        <a href="#videos">YouTube</a>
         <a href="#about">About</a>
         <a href="#register">Registration</a>
         <a href="#contact">Contact</a>
@@ -465,7 +465,7 @@
       <div class="modal-head">
         <div>
           <h3 id="registrationTitle">Student Registration</h3>
-          <p>Complete your details and submit your registration on WhatsApp.</p>
+          <p>Complete your details and create your student login account.</p>
         </div>
         <button class="modal-close" id="closeRegistration" type="button" aria-label="Close registration"><i class="fa-solid fa-xmark"></i></button>
       </div>
@@ -479,7 +479,8 @@
           <div class="form-grid">
             <div class="field"><label for="modalFullName">Full Name</label><input id="modalFullName" required placeholder="Enter your full name"></div>
             <div class="field"><label for="modalWhatsapp">WhatsApp Number</label><input id="modalWhatsapp" required placeholder="+92 3XX XXXXXXX"></div>
-            <div class="field"><label for="modalEmail">Email</label><input id="modalEmail" type="email" placeholder="your@email.com"></div>
+            <div class="field"><label for="modalEmail">Email</label><input id="modalEmail" type="email" required placeholder="your@email.com" autocomplete="email"></div>
+            <div class="field"><label for="modalPassword">Login Password</label><input id="modalPassword" type="password" required minlength="6" placeholder="Create a password (min 6 characters)" autocomplete="new-password"></div>
             <div class="field"><label for="modalAddress">Current Address</label><input id="modalAddress" required placeholder="Enter your current address"></div>
             <div class="field"><label for="modalQualification">Current Qualification</label><input id="modalQualification" required placeholder="e.g. Matric, Intermediate, BS"></div>
             <div class="field"><label for="modalPaymentMethod">Payment Method</label>
@@ -501,7 +502,7 @@
               <div class="modal-payment">
                 <strong><i class="fa-solid fa-money-bill-transfer"></i> Payment Details</strong>
                 <p style="font-size:13px;color:#68758d;margin-top:5px">Easypaisa: <strong>0315 9670967</strong><br>JazzCash: <strong>0327 5644075</strong></p>
-                <p style="font-size:12px;color:#8792a6">Payment ke baad screenshot yahan select karein. Preview form mein rahega; WhatsApp khulne par screenshot ko manually attach karke send kar dein.</p>
+                <p style="font-size:12px;color:#8792a6">Select your payment screenshot here for your record.</p>
                 <label class="upload-box" for="paymentScreenshot">
                   <i class="fa-solid fa-image"></i>
                   <span><b>Payment Screenshot</b><small>Tap to choose JPG, PNG or WEBP</small></span>
@@ -515,7 +516,7 @@
             </div>
             <div class="field full">
               <div class="modal-actions">
-                <button class="btn btn-primary" type="submit"><i class="fa-brands fa-whatsapp"></i> Submit</button>
+                <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit</button>
                 <button class="btn btn-light" id="cancelRegistration" type="button">Cancel</button>
               </div>
             </div>
@@ -571,74 +572,23 @@
         <div class="section-head">
           <div class="eyebrow"><i class="fa-solid fa-layer-group"></i> Our Courses</div>
           <h2>Choose a skill that can move you forward</h2>
-          <p>Each course focuses on practical, useful skills you can apply to study, work and freelancing.</p>
+          <p>Each course focuses on practical, useful skills you can apply to study and work.</p>
         </div>
 
         <div class="course-grid">
           <article class="course">
-            <div class="course-img"><img class="active" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=90" alt="Web Development course image 1"><span class="badge">POPULAR</span></div>
-            <div class="course-body">
-              <div class="course-icon"><i class="fa-solid fa-code"></i></div>
-              <h3>Web Development</h3>
-              <p>Learn HTML, CSS, JavaScript and modern website building from the basics to real projects.</p>
-              <div class="price"><i class="fa-solid fa-tag"></i> Course Fee: Rs. 5,000</div>
-              <div class="course-foot"><span class="duration"><i class="fa-regular fa-clock"></i> Project based</span><a class="btn btn-primary enroll" href="#" data-course="Web Development">Enroll Now</a></div>
-            </div>
+            <div class="course-img"><img class="active" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=90" alt="Web Development course image"><span class="badge">POPULAR</span></div>
+            <div class="course-body"><div class="course-icon"><i class="fa-solid fa-code"></i></div><h3>Web Development</h3><p>Learn HTML, CSS, JavaScript and modern website building from basics to real projects.</p><div class="price"><i class="fa-solid fa-tag"></i> Course Fee: Rs. 5,000</div><div class="course-foot"><span class="duration"><i class="fa-regular fa-clock"></i> Project based</span><a class="btn btn-primary enroll" href="#" data-course="Web Development">Enroll Now</a></div></div>
           </article>
 
           <article class="course">
-            <div class="course-img"><img class="active" src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1600&q=90" alt="Graphic Design course image 1"><span class="badge">CREATIVE</span></div>
-            <div class="course-body">
-              <div class="course-icon"><i class="fa-solid fa-pen-nib"></i></div>
-              <h3>Graphic Design</h3>
-              <p>Build design skills for social media, branding, posters, thumbnails and professional visual content.</p>
-              <div class="price"><i class="fa-solid fa-tag"></i> Course Fee: Rs. 5,000</div>
-              <div class="course-foot"><span class="duration"><i class="fa-regular fa-clock"></i> Practical</span><a class="btn btn-primary enroll" href="#" data-course="Graphic Design">Enroll Now</a></div>
-            </div>
+            <div class="course-img"><img class="active" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=90" alt="Agentic AI course image"><span class="badge">AI</span></div>
+            <div class="course-body"><div class="course-icon"><i class="fa-solid fa-robot"></i></div><h3>Agentic AI</h3><p>Learn AI agents, automation, intelligent workflows and practical AI tools for modern work.</p><div class="price"><i class="fa-solid fa-tag"></i> Course Fee: Rs. 5,000</div><div class="course-foot"><span class="duration"><i class="fa-regular fa-clock"></i> Practical</span><a class="btn btn-primary enroll" href="#" data-course="Agentic AI">Enroll Now</a></div></div>
           </article>
 
           <article class="course">
-            <div class="course-img"><img class="active" src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=1600&q=90" alt="Digital Marketing course image 1"><span class="badge">GROWTH</span></div>
-            <div class="course-body">
-              <div class="course-icon"><i class="fa-solid fa-bullhorn"></i></div>
-              <h3>Digital Marketing</h3>
-              <p>Understand social media, content strategy, online promotion, audience growth and digital campaigns.</p>
-              <div class="price"><i class="fa-solid fa-tag"></i> Course Fee: Rs. 10,000</div>
-              <div class="course-foot"><span class="duration"><i class="fa-regular fa-clock"></i> Career focused</span><a class="btn btn-primary enroll" href="#" data-course="Digital Marketing">Enroll Now</a></div>
-            </div>
-          </article>
-
-          <article class="course">
-            <div class="course-img"><img class="active" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=90" alt="Freelancing course image 1"><span class="badge">EARNING</span></div>
-            <div class="course-body">
-              <div class="course-icon"><i class="fa-solid fa-briefcase"></i></div>
-              <h3>Freelancing</h3>
-              <p>Learn how to present your skills, create profiles, find clients, communicate professionally and grow.</p>
-              <div class="price"><i class="fa-solid fa-tag"></i> Course Fee: Rs. 10,000</div>
-              <div class="course-foot"><span class="duration"><i class="fa-regular fa-clock"></i> Beginner friendly</span><a class="btn btn-primary enroll" href="#" data-course="Freelancing">Enroll Now</a></div>
-            </div>
-          </article>
-
-          <article class="course">
-            <div class="course-img"><img class="active" src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1600&q=90" alt="Video Editing course image 1"><span class="badge">MEDIA</span></div>
-            <div class="course-body">
-              <div class="course-icon"><i class="fa-solid fa-video"></i></div>
-              <h3>Video Editing</h3>
-              <p>Learn editing workflow, cuts, transitions, text, audio and short-form content for social platforms.</p>
-              <div class="price"><i class="fa-solid fa-tag"></i> Course Fee: Rs. 5,000</div>
-              <div class="course-foot"><span class="duration"><i class="fa-regular fa-clock"></i> Hands-on</span><a class="btn btn-primary enroll" href="#" data-course="Video Editing">Enroll Now</a></div>
-            </div>
-          </article>
-
-          <article class="course">
-            <div class="course-img"><img class="active" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1600&q=90" alt="MS Office course image 1"><span class="badge">ESSENTIAL</span></div>
-            <div class="course-body">
-              <div class="course-icon"><i class="fa-solid fa-file-word"></i></div>
-              <h3>MS Office</h3>
-              <p>Improve your skills in Word, Excel, PowerPoint, documents, spreadsheets and everyday office work.</p>
-              <div class="price"><i class="fa-solid fa-tag"></i> Course Fee: Rs. 1,000</div>
-              <div class="course-foot"><span class="duration"><i class="fa-regular fa-clock"></i> Fundamentals</span><a class="btn btn-primary enroll" href="#" data-course="MS Office">Enroll Now</a></div>
-            </div>
+            <div class="course-img"><img class="active" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1600&q=90" alt="MS Office course image"><span class="badge">ESSENTIAL</span></div>
+            <div class="course-body"><div class="course-icon"><i class="fa-solid fa-file-word"></i></div><h3>MS Office</h3><p>Improve your skills in Word, Excel, PowerPoint, documents, spreadsheets and everyday office work.</p><div class="price"><i class="fa-solid fa-tag"></i> Course Fee: Rs. 1,000</div><div class="course-foot"><span class="duration"><i class="fa-regular fa-clock"></i> Fundamentals</span><a class="btn btn-primary enroll" href="#" data-course="MS Office">Enroll Now</a></div></div>
           </article>
         </div>
       </div>
@@ -652,31 +602,13 @@
           <p>Instead of only learning theory, focus on practical digital skills and projects that help you become more confident.</p>
           <div class="tick"><i class="fa-solid fa-check-circle"></i> Easy-to-understand learning path</div>
           <div class="tick"><i class="fa-solid fa-check-circle"></i> Useful digital career skills</div>
-          <div class="tick"><i class="fa-solid fa-check-circle"></i> Registration through WhatsApp</div>
+          <div class="tick"><i class="fa-solid fa-check-circle"></i> Easy online registration</div>
         </div>
         <div class="features">
           <div class="feature"><i class="fa-solid fa-laptop"></i><h4>Practical Skills</h4><p>Learn by doing with realistic digital tasks and projects.</p></div>
           <div class="feature"><i class="fa-solid fa-mobile-screen-button"></i><h4>Mobile Friendly</h4><p>The website works smoothly on phones, tablets and computers.</p></div>
           <div class="feature"><i class="fa-solid fa-user-graduate"></i><h4>Beginner Friendly</h4><p>Courses are presented in a simple way for new learners.</p></div>
-          <div class="feature"><i class="fa-solid fa-arrow-trend-up"></i><h4>Career Focused</h4><p>Build skills that can support study, jobs and freelancing.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="videos" id="videos">
-      <div class="container">
-        <div class="section-head">
-          <div class="eyebrow"><i class="fa-brands fa-youtube"></i> YouTube Learning</div>
-          <h2>Learn from useful tutorials</h2>
-          <p>Selected public YouTube tutorials from different creators to help you keep learning.</p>
-        </div>
-        <div class="video-grid">
-          <div class="video"><iframe src="https://www.youtube.com/embed/ok5xxc9LhPg" title="HTML CSS JavaScript tutorial" loading="lazy" allowfullscreen></iframe><h3>HTML5, CSS3 & JavaScript — Complete Tutorial</h3></div>
-          <div class="video"><iframe src="https://www.youtube.com/embed/k103bbhTdXY" title="Web development tutorial" loading="lazy" allowfullscreen></iframe><h3>HTML, CSS & JavaScript — Web Development</h3></div>
-          <div class="video"><iframe src="https://www.youtube.com/embed/qnBhOVH1QQ8" title="Digital marketing course" loading="lazy" allowfullscreen></iframe><h3>Digital Marketing — Full Course</h3></div>
-          <div class="video"><iframe src="https://www.youtube.com/embed/cZ-5phWZujI" title="Digital marketing for beginners" loading="lazy" allowfullscreen></iframe><h3>How to Start Digital Marketing</h3></div>
-          <div class="video"><iframe src="https://www.youtube.com/embed/r9vV4QOubD4" title="Upwork freelancing course" loading="lazy" allowfullscreen></iframe><h3>How to Start Freelancing on Upwork</h3></div>
-          <div class="video"><iframe src="https://www.youtube.com/embed/2oO5EXwmJEw" title="Freelancing for beginners" loading="lazy" allowfullscreen></iframe><h3>Freelancing on Upwork for Complete Beginners</h3></div>
+          <div class="feature"><i class="fa-solid fa-arrow-trend-up"></i><h4>Career Focused</h4><p>Build skills that can support study and jobs.</p></div>
         </div>
       </div>
     </section>
@@ -687,7 +619,7 @@
           <div class="eyebrow"><i class="fa-solid fa-circle-info"></i> About Academy</div>
           <h2>Learn With Khayam Khan — Build Skills, Build Your Future.</h2>
           <p>Khayam Khan Academy is designed around practical digital learning. The goal is to make useful skills easier to understand and easier to start.</p>
-          <p>Whether you want to build websites, design graphics, edit videos, market online, freelance or improve office skills, you can choose a learning path that matches your goal.</p>
+          <p>Whether you want to build websites, learn Agentic AI or improve your office skills, you can choose a learning path that matches your goal.</p>
           <a class="btn btn-primary open-registration" href="#register"><i class="fa-solid fa-arrow-right"></i> Start Registration</a>
         </div>
         <div class="owner-card">
@@ -707,7 +639,7 @@
         <div>
           <div class="eyebrow" style="background:rgba(255,255,255,.12);color:#fff"><i class="fa-solid fa-user-plus"></i> Student Registration</div>
           <h2>Ready to start learning?</h2>
-          <p>Fill in the form. Payment ke baad receipt/screenshot select karein; WhatsApp khulega aur aap screenshot ko wahan attach karke send kar sakte hain.</p>
+          <p>Fill in the form to create your student account. Your email and password will be used for login.</p>
           <div class="contact-list">
             <a href="https://wa.me/923449449456" target="_blank"><i class="fa-brands fa-whatsapp"></i><span><strong>WhatsApp</strong><br>0344 9449456</span></a>
             <a href="mailto:zamankhan452df@gmail.com"><i class="fa-solid fa-envelope"></i><span><strong>Email</strong><br>zamankhan452df@gmail.com</span></a>
@@ -720,7 +652,7 @@
           <p><strong>Payment Method:</strong> Easypaisa / JazzCash</p>
           <p><strong>Easypaisa:</strong> 0315 9670967</p>
           <p><strong>JazzCash:</strong> 0327 5644075</p>
-          <p>Payment karne ke baad receipt/screenshot WhatsApp par bhej dein.</p>
+          <p>Payment ke baad receipt/screenshot apne record ke liye rakh lein.</p>
         </div>
         </div>
 
@@ -729,15 +661,13 @@
           <div class="form-grid">
             <div class="field"><label for="fullName">Full Name</label><input id="fullName" required placeholder="Enter your full name"></div>
             <div class="field"><label for="whatsapp">WhatsApp Number</label><input id="whatsapp" required placeholder="+92 3XX XXXXXXX"></div>
-            <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="your@email.com"></div>
+            <div class="field"><label for="email">Email</label><input id="email" type="email" required placeholder="your@email.com"></div>
+            <div class="field"><label for="password">Login Password</label><input id="password" type="password" required minlength="6" placeholder="Create a password (min 6 characters)" autocomplete="new-password"></div>
             <div class="field"><label for="course">Select Course</label>
               <select id="course" required>
                 <option value="">Choose a course</option>
                 <option>Web Development</option>
-                <option>Graphic Design</option>
-                <option>Digital Marketing</option>
-                <option>Freelancing</option>
-                <option>Video Editing</option>
+                <option>Agentic AI</option>
                 <option>MS Office</option>
               </select>
             </div>
@@ -765,9 +695,9 @@
                 <img id="screenshotPreviewImgMain" alt="Payment screenshot preview">
               </div>
             </div>
-            <div class="field full"><button class="btn btn-primary" type="submit"><i class="fa-brands fa-whatsapp"></i> Submit</button></div>
+            <div class="field full"><button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit</button></div>
           </div>
-          <small>No backend is required. Your form details are prepared in WhatsApp on your device.</small>
+          <small>Your student account is securely saved on the academy server for login from any device.</small>
         </form>
       </div>
     </section>
@@ -803,7 +733,6 @@
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
-
     menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
@@ -812,158 +741,75 @@
     const closeRegistration = document.getElementById('closeRegistration');
     const cancelRegistration = document.getElementById('cancelRegistration');
     const modalRegistrationForm = document.getElementById('modalRegistrationForm');
-    const courseSelectModal = document.getElementById('course');
     const selectedCourseLabel = document.getElementById('selectedCourseLabel');
     const selectedCourseFee = document.getElementById('selectedCourseFee');
-
-    const courseFees = {
-      "Web Development":"5,000",
-      "Graphic Design":"5,000",
-      "Digital Marketing":"10,000",
-      "Freelancing":"10,000",
-      "Video Editing":"5,000",
-      "MS Office":"1,000"
-    };
+    const courseFees = {"Web Development":"5,000","Agentic AI":"5,000","MS Office":"1,000"};
 
     function updateModalFee(){
-      const course = courseSelectModal.value || 'Choose a course';
+      const course = document.getElementById('course').value || 'Choose a course';
       selectedCourseLabel.textContent = course;
       selectedCourseFee.textContent = 'Rs. ' + (courseFees[course] || '5,000');
     }
-
-    function closeModal(){
-      registrationModal.classList.remove('show');
-      document.body.style.overflow = '';
-    }
-
+    function closeModal(){ registrationModal.classList.remove('show'); document.body.style.overflow=''; }
     closeRegistration.addEventListener('click', closeModal);
     cancelRegistration.addEventListener('click', closeModal);
-    registrationModal.addEventListener('click', e => {
-      if(e.target === registrationModal) closeModal();
-    });
-    document.addEventListener('keydown', e => {
-      if(e.key === 'Escape') closeModal();
-    });
+    registrationModal.addEventListener('click', e => { if(e.target===registrationModal) closeModal(); });
+    document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
 
-    modalRegistrationForm.addEventListener('submit', function(e){
-      e.preventDefault();
-
-      const name = document.getElementById('modalFullName').value.trim();
-      const number = document.getElementById('modalWhatsapp').value.trim();
-      const email = document.getElementById('modalEmail').value.trim();
-      const address = document.getElementById('modalAddress').value.trim();
-      const qualification = document.getElementById('modalQualification').value.trim();
-      const age = document.getElementById('modalAge').value.trim();
-      const course = courseSelectModal.value;
-      const fee = courseFees[course] || '5,000';
-      const paymentMethod = document.getElementById('modalPaymentMethod').value;
-      const paymentStatus = document.getElementById('modalPaymentStatus').value;
-      const message = document.getElementById('modalMessage').value.trim();
-
-      const text =
-`*Khayam Khan Academy — Student Registration*
-
-*Full Name:* ${name}
-*WhatsApp Number:* ${number}
-*Email:* ${email || 'Not provided'}
-*Current Address:* ${address}
-*Current Qualification:* ${qualification}
-*Age:* ${age || 'Not provided'}
-*Course:* ${course}
-*Course Fee:* Rs. ${fee}
-*Payment Method:* ${paymentMethod}
-*Payment Status:* ${paymentStatus}
-*Easypaisa Number:* 0315 9670967
-*JazzCash Number:* 0327 5644075
-*Payment Screenshot:* Selected in form — please attach the screenshot in WhatsApp before sending.
-*Message:* ${message || 'No additional message'}
-
-I want to register for this course.`;
-
-      window.open('https://wa.me/923449449456?text=' + encodeURIComponent(text), '_blank');
-    });
-
-    function setupScreenshotPicker(inputId, previewId, imgId, removeId){
-      const input = document.getElementById(inputId);
-      const preview = document.getElementById(previewId);
-      const img = document.getElementById(imgId);
-      if(!input) return;
-      input.addEventListener('change', () => {
-        const file = input.files && input.files[0];
-        if(!file) return;
-        if(!file.type.startsWith('image/')) return;
-        const reader = new FileReader();
-        reader.onload = e => {
-          img.src = e.target.result;
-          preview.hidden = false;
-        };
-        reader.readAsDataURL(file);
+    function readFileAsDataURL(file){
+      return new Promise((resolve,reject)=>{
+        if(!file){resolve('');return;}
+        if(!file.type.startsWith('image/')){reject(new Error('Please select an image screenshot.'));return;}
+        if(file.size>5*1024*1024){reject(new Error('Screenshot must be 5 MB or smaller.'));return;}
+        const r=new FileReader(); r.onload=()=>resolve(r.result); r.onerror=()=>reject(new Error('Could not read screenshot.')); r.readAsDataURL(file);
       });
-      if(removeId){
-        const remove = document.getElementById(removeId);
-        remove && remove.addEventListener('click', () => {
-          input.value = '';
-          preview.hidden = true;
-          img.removeAttribute('src');
-        });
-      }
+    }
+
+    async function submitRegistration(formType){
+      const isModal=formType==='modal';
+      const get=id=>document.getElementById(isModal?'modal'+id:id);
+      const form=isModal?modalRegistrationForm:document.getElementById('registrationForm');
+      const name=get('FullName').value.trim();
+      const number=get('Whatsapp').value.trim();
+      const email=get('Email').value.trim().toLowerCase();
+      const password=get('Password').value;
+      const course=get('course').value;
+      const paymentMethod=(get('PaymentMethod')?.value||'').trim();
+      const paymentStatus=(get('PaymentStatus')?.value||'Free').trim();
+      const message=(get('Message')?.value||'').trim();
+      if(!name){alert('Please enter your full name.');return;}
+      if(!email || password.length<6){alert('Please enter a valid email and a password of at least 6 characters.');return;}
+      if(!course){alert('Please select a course.');return;}
+      const students=getStudents();
+      if(students.some(x=>x.email===email)){alert('This email is already registered. Please login.');return;}
+      let screenshot='';
+      try{
+        const shot=document.getElementById(isModal?'paymentScreenshot':'paymentScreenshotMain')?.files?.[0];
+        screenshot=await readFileAsDataURL(shot);
+      }catch(err){alert(err.message);return;}
+      const address=isModal?(document.getElementById('modalAddress')?.value.trim()||''):'';
+      const qualification=isModal?(document.getElementById('modalQualification')?.value.trim()||''):'';
+      const age=isModal?(document.getElementById('modalAge')?.value.trim()||''):'';
+      const student={id:Date.now().toString(),name,phone:number,email,password,course,paymentMethod,paymentStatus,message,address,qualification,age,screenshot,registeredAt:new Date().toISOString()};
+      students.push(student); saveStudents(students);
+      alert('Registration successful. Your details and payment screenshot have been saved on this device.');
+      if(isModal){closeModal();form.reset();}else form.reset();
+    }
+    modalRegistrationForm.addEventListener('submit',e=>{e.preventDefault();submitRegistration('modal');});
+
+    function setupScreenshotPicker(inputId,previewId,imgId,removeId){
+      const input=document.getElementById(inputId), preview=document.getElementById(previewId), img=document.getElementById(imgId); if(!input)return;
+      input.addEventListener('change',()=>{const file=input.files&&input.files[0];if(!file)return;if(!file.type.startsWith('image/')){alert('Please select an image screenshot.');input.value='';return;}if(file.size>5*1024*1024){alert('Screenshot must be 5 MB or smaller.');input.value='';return;}const r=new FileReader();r.onload=e=>{img.src=e.target.result;preview.hidden=false};r.readAsDataURL(file);});
+      if(removeId){const remove=document.getElementById(removeId);remove&&remove.addEventListener('click',()=>{input.value='';preview.hidden=true;img.removeAttribute('src');});}
     }
     setupScreenshotPicker('paymentScreenshot','screenshotPreview','screenshotPreviewImg','removeScreenshot');
     setupScreenshotPicker('paymentScreenshotMain','screenshotPreviewMain','screenshotPreviewImgMain',null);
 
-    const toast = document.getElementById('toast');
+    document.querySelectorAll('.open-registration').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();document.getElementById('course').value='';updateModalFee();registrationModal.classList.add('show');document.body.style.overflow='hidden';}));
+    document.querySelectorAll('.enroll').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();document.getElementById('course').value=btn.dataset.course;updateModalFee();registrationModal.classList.add('show');document.body.style.overflow='hidden';document.getElementById('modalFullName').focus();}));
+    document.getElementById('registrationForm').addEventListener('submit',e=>{e.preventDefault();submitRegistration('main');});
 
-    document.querySelectorAll('.open-registration').forEach(btn => {
-      btn.addEventListener('click', e => {
-        e.preventDefault();
-        courseSelectModal.value = '';
-        updateModalFee();
-        registrationModal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-
-
-    document.querySelectorAll('.enroll').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        courseSelectModal.value = btn.dataset.course;
-        updateModalFee();
-        registrationModal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-        document.getElementById('modalFullName').focus();
-      });
-    });
-
-    document.getElementById('registrationForm').addEventListener('submit', function(e){
-      e.preventDefault();
-
-      const name = document.getElementById('fullName').value.trim();
-      const number = document.getElementById('whatsapp').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const course = document.getElementById('course').value;
-      const message = document.getElementById('message').value.trim();
-       const paymentMethod = document.getElementById('paymentMethod').value || 'Not selected';
-       const paymentStatus = document.getElementById('paymentStatus').value;
-
-      const text =
-`*Khayam Khan Academy — Student Registration*
-
-*Full Name:* ${name}
-*WhatsApp Number:* ${number}
-*Email:* ${email || 'Not provided'}
-*Course:* ${course}
-*Course Fee:* Rs. 5,000
-*Payment Method:* ${paymentMethod}
-*Payment Status:* ${paymentStatus}
-*Message:* ${message || 'No additional message'}
-
-I want to register for this course.`;
-
-      window.open('https://wa.me/923449449456?text=' + encodeURIComponent(text), '_blank');
-    });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
